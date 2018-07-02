@@ -42,7 +42,13 @@ var client = redis.NewClient(&redis.Options{
 var registeredCountryCodes = map[string]string{
 	"gb": "United Kingdom",
 	"ro": "Romania",
-	"us": "United States"}
+	"us": "United States",
+	"be": "Belgium",
+	"fr": "France",
+	"ru": "Russia",
+	"bd": "Bangladesh",
+	"bf": "Burkina Faso",
+	"bg": "Bulgaria"}
 
 func getCountryFromRequest(r *http.Request) string {
 	keys, ok := r.URL.Query()["country"]
